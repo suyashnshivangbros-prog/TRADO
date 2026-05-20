@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TRADO</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- LOGIN OVERLAY -->
+
+    <div id="loginOverlay" class="login-overlay">
+
+        <div class="login-box">
+
+            <h1 class="logo-text">
+                TRADO
+            </h1>
+
+            <p class="login-subtitle">
+                Secure Trading Dashboard
+            </p>
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter Password"
+            >
+
+            <button id="loginBtn">
+                ENTER
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MAIN APPLICATION -->
+
+    <div id="mainApp">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <h1 class="main-logo">
+                    TRADO
+                </h1>
+
+                <p class="main-tagline">
+                    Built For Precision
+                </p>
+
+            </div>
+
+
+
+            <div class="header-right">
+
+                <p class="creator-text">
+                    Created By Shivang Patel
+                </p>
+
+                <button id="logoutBtn">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="tab-navigation">
+
+            <button
+                class="tab-button active-tab"
+                data-tab="homeTab"
+            >
+                Home
+            </button>
+
+            <button
+                class="tab-button"
+                data-tab="strategyTab"
+            >
+                Strategy
+            </button>
+
+            <button
+                class="tab-button"
+                data-tab="backtestTab"
+            >
+                Backtest
+            </button>
+
+            <button
+                class="tab-button"
+                data-tab="profileTab"
+            >
+                Profile
+            </button>
+
+            <button
+                class="tab-button"
+                data-tab="settingsTab"
+            >
+                Settings
+            </button>
+
+        </nav>
+
+
+
+        <!-- HOME TAB -->
+
+        <section
+            id="homeTab"
+            class="tab-content active-content"
+        >
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Portfolio
+                    </h2>
+
+                    <p id="portfolio-status">
+                        ₹500000
+                    </p>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        System Status
+                    </h2>
+
+                    <p id="system-status">
+                        Loading...
+                    </p>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Market State
+                    </h2>
+
+                    <p id="market-state">
+                        Loading...
+                    </p>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Deployment
+                    </h2>
+
+                    <p id="deployment-status">
+                        STOPPED
+                    </p>
+
+                </div>
+
+
+
+                <div class="dashboard-card signal-card">
+
+                    <h2>
+                        Live Signal
+                    </h2>
+
+                    <p id="signal-output">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STRATEGY TAB -->
+
+        <section
+            id="strategyTab"
+            class="tab-content"
+        >
+
+            <div class="section-header">
+
+                <h1>
+                    Strategy Engine
+                </h1>
+
+                <button id="openStrategyPopup">
+                    Create Strategy
+                </button>
+
+            </div>
+
+
+
+            <div id="strategyContainer">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BACKTEST TAB -->
+
+        <section
+            id="backtestTab"
+            class="tab-content"
+        >
+
+            <div class="section-header">
+
+                <h1>
+                    Backtest Engine
+                </h1>
+
+                <button id="runBacktestBtn">
+                    Run Backtest
+                </button>
+
+            </div>
+
+
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Profit
+                    </h2>
+
+                    <p id="profitResult">
+                        --
+                    </p>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Win Rate
+                    </h2>
+
+                    <p id="winRateResult">
+                        --
+                    </p>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Trades
+                    </h2>
+
+                    <p id="tradeResult">
+                        --
+                    </p>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Drawdown
+                    </h2>
+
+                    <p id="drawdownResult">
+                        --
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="dashboard-card large-card">
+
+                <h2>
+                    Backtest Overview
+                </h2>
+
+                <p id="overviewContent">
+                    Waiting...
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROFILE TAB -->
+
+        <section
+            id="profileTab"
+            class="tab-content"
+        >
+
+            <div class="profile-card">
+
+                <img
+                    src="https://i.imgur.com/2DhmtJ4.png"
+                    class="profile-image"
+                >
+
+                <h1>
+                    Shivang Patel
+                </h1>
+
+                <p>
+                    Creator Of TRADO
+                </p>
+
+
+
+                <div class="profile-data">
+
+                    <div>
+
+                        <h3>
+                            Capital
+                        </h3>
+
+                        <p id="profile-capital">
+                            ₹500000
+                        </p>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <h3>
+                            Broker
+                        </h3>
+
+                        <p id="profile-broker">
+                            Paper Trading
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <button id="refreshProfileBtn">
+                    Refresh Profile
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SETTINGS TAB -->
+
+        <section
+            id="settingsTab"
+            class="tab-content"
+        >
+
+            <div class="settings-grid">
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Broker Connection
+                    </h2>
+
+                    <input
+                        type="text"
+                        id="brokerApiKey"
+                        placeholder="Broker API Key"
+                    >
+
+                    <input
+                        type="password"
+                        id="brokerApiSecret"
+                        placeholder="Broker Secret"
+                    >
+
+                    <button id="saveBrokerBtn">
+                        Save Broker
+                    </button>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Deployment Controls
+                    </h2>
+
+                    <button id="paperTradeBtn">
+                        Paper Trading
+                    </button>
+
+                    <button id="liveTradeBtn">
+                        Live Trading
+                    </button>
+
+                    <button id="stopTradeBtn">
+                        Stop Trading
+                    </button>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        System Settings
+                    </h2>
+
+                    <button id="saveSettingsBtn">
+                        Save Settings
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- STRATEGY POPUP -->
+
+    <div id="strategyPopup" class="popup-overlay">
+
+        <div class="popup-box">
+
+            <h1>
+                Create Strategy
+            </h1>
+
+
+
+            <input
+                type="text"
+                id="strategyName"
+                placeholder="Strategy Name"
+            >
+
+
+
+            <input
+                type="number"
+                id="strategyRisk"
+                placeholder="Risk %"
+            >
+
+
+
+            <input
+                type="number"
+                id="strategyPosition"
+                placeholder="Max Position Size"
+            >
+
+
+
+            <input
+                type="number"
+                id="strategyStoploss"
+                placeholder="Stoploss %"
+            >
+
+
+
+            <input
+                type="number"
+                id="strategyTarget"
+                placeholder="Target %"
+            >
+
+
+
+            <textarea
+                id="strategyLogic"
+                placeholder="Paste Full Strategy Logic Here..."
+            ></textarea>
+
+
+
+            <div class="popup-buttons">
+
+                <button id="createStrategyBtn">
+                    CREATE
+                </button>
+
+
+
+                <button id="closeStrategyPopup">
+                    CLOSE
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
