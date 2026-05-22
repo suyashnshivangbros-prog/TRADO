@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const {
     runVWAPStrategy
-} = require("./strategyengine");
+} = require("./strategyEngine");
 
 const app = express();
 
