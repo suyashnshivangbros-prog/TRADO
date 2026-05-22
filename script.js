@@ -18,7 +18,7 @@ if(loginBtn){
 
             const response =
             await fetch(
-                "http://https://trado-backend-xtk6.onrender.com/api/login",
+                "https://trado-backend-xtk6.onrender.com",
                 {
                     method:"POST",
 
@@ -241,7 +241,7 @@ if(createStrategyBtn){
 
             const response =
             await fetch(
-                "http://https://trado-backend-xtk6.onrender.com/api/strategy/create",
+                "https://trado-backend-xtk6.onrender.com",
                 {
 
                     method:"POST",
@@ -425,7 +425,7 @@ if(runBacktestBtn){
 
             const response =
             await fetch(
-                "http://https://trado-backend-xtk6.onrender.comapi/backtest/run",
+                "https://trado-backend-xtk6.onrender.com",
                 {
                     method:"POST",
 
@@ -501,7 +501,7 @@ async function loadSignal(){
 
         const response =
         await fetch(
-            "http://https://trado-backend-xtk6.onrender.com/api/signal"
+            "https://trado-backend-xtk6.onrender.com"
         );
 
 
