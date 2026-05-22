@@ -1,6 +1,6 @@
 const {
     getMarketData
-} = require("./marketdata");
+} = require("./marketData");
 
 
 
